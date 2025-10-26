@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>XMAS Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B0000",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'zoom-in': 'zoom-in 20s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'zoom-in': {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.2)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative min-h-screen w-full overflow-hidden">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover animate-zoom-in" loop="" muted="" playsinline="" poster="https://images.unsplash.com/photo-1510279931157-553518c9429c?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<source src="https://cdn.pixabay.com/video/2023/12/09/192649-892970391_large.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="relative z-10 flex flex-col min-h-screen">
+<header class="absolute top-0 left-0 right-0 px-10 py-5">
+<div class="container mx-auto flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white text-2xl">ac_unit</span>
+<h2 class="text-white text-xl font-bold tracking-tight">XMAS STUDIO</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium" href="#">Our Work</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium" href="#">Services</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium" href="#">About Us</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium" href="#">Contact</a>
+</nav>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center text-center">
+<div class="flex flex-col items-center gap-6 p-4">
+<h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        XMAS STUDIO
+                    </h1>
+<p class="text-white/90 text-base md:text-lg max-w-2xl">
+                        Welcome to our creative workshop. We bring the magic of Christmas to life through stunning carols and captivating stories.
+                    </p>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold text-base py-3 px-8 rounded-lg transition-colors shadow-lg">
+                        Discover Our Creations
+                    </button>
+</div>
+</main>
+</div>
+</div>
+</body></html>
