@@ -1,2 +1,0 @@
-# xmas.studio
-xmas.studio
