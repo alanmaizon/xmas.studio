@@ -2,6 +2,11 @@ import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
 
 const HEADER_HEIGHT_PX = 61;
+const BACKGROUND_POSTER_URL =
+  "https://images.unsplash.com/photo-1510279931157-553518c9429c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3";
+const BACKGROUND_VIDEO_URL =
+  "https://cdn.pixabay.com/video/2023/12/09/192649-892970391_large.mp4";
+const SUPPORT_LINK = "https://buy.stripe.com/9B6dR3e7X25G5YJ8174wM00";
 
 export default function Home() {
   return (
@@ -12,13 +17,10 @@ export default function Home() {
         muted
         playsInline
         aria-hidden="true"
-        poster="https://images.unsplash.com/photo-1510279931157-553518c9429c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+        poster={BACKGROUND_POSTER_URL}
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source
-          src="https://cdn.pixabay.com/video/2023/12/09/192649-892970391_large.mp4"
-          type="video/mp4"
-        />
+        <source src={BACKGROUND_VIDEO_URL} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 min-h-screen">
@@ -36,7 +38,7 @@ export default function Home() {
               through stunning carols and captivating stories.
             </p>
             <Link
-              href="https://buy.stripe.com/9B6dR3e7X25G5YJ8174wM00"
+              href={SUPPORT_LINK}
               className="rounded-lg bg-red-900 px-8 py-3 text-base font-bold text-white shadow-lg transition-colors hover:bg-red-800"
             >
               Support Our Creations
