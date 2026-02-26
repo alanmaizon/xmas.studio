@@ -1,49 +1,43 @@
 import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
 
-const categories = ["Apparel", "Home", "Toys", "Decor", "Crafts", "Food"];
-
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <SiteHeader />
-      <main className="mx-auto max-w-6xl px-4 py-12">
-        <section className="rounded-2xl bg-gradient-to-r from-red-700 to-green-700 p-8 text-white shadow-lg">
-          <p className="text-sm uppercase tracking-wide">Holiday Demo Store</p>
-          <h1 className="mt-2 text-4xl font-bold">Welcome to xmas.studio gift shop</h1>
-          <p className="mt-3 max-w-2xl text-red-50">
-            A deterministic, demo-safe ecommerce flow with local data and no real
-            payment processing.
-          </p>
-          <div className="mt-6 flex gap-3">
+    <div className="relative min-h-screen overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="https://images.unsplash.com/photo-1510279931157-553518c9429c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2023/12/09/192649-892970391_large.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="relative z-10 min-h-screen">
+        <SiteHeader />
+        <main className="mx-auto flex min-h-[calc(100vh-61px)] max-w-6xl items-center justify-center px-4 text-center">
+          <div className="flex flex-col items-center gap-6">
+            <h1 className="text-6xl font-black tracking-tighter text-white md:text-8xl">
+              XMAS STUDIO
+            </h1>
+            <p className="max-w-2xl text-base text-white/90 md:text-lg">
+              Welcome to our creative workshop. We bring the magic of Christmas to life
+              through stunning carols and captivating stories.
+            </p>
             <Link
-              href="/shop"
-              className="rounded-full bg-white px-5 py-2 font-semibold text-red-700"
+              href="https://buy.stripe.com/9B6dR3e7X25G5YJ8174wM00"
+              className="rounded-lg bg-red-900 px-8 py-3 text-base font-bold text-white shadow-lg transition-colors hover:bg-red-800"
             >
-              Start shopping
-            </Link>
-            <Link href="/cart" className="rounded-full border border-white px-5 py-2">
-              Go to cart
+              Support Our Creations
             </Link>
           </div>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-semibold">Browse categories</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-            {categories.map((category) => (
-              <Link
-                key={category}
-                href={`/shop?category=${encodeURIComponent(category)}`}
-                className="rounded-xl border border-red-100 bg-white p-4 shadow-sm transition hover:shadow"
-              >
-                <p className="font-medium">{category}</p>
-                <p className="text-sm text-zinc-600">See gifts in {category.toLowerCase()}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
