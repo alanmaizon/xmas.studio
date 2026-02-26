@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
 
+const HEADER_HEIGHT_PX = 61;
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -9,6 +11,7 @@ export default function Home() {
         loop
         muted
         playsInline
+        aria-hidden="true"
         poster="https://images.unsplash.com/photo-1510279931157-553518c9429c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
         className="absolute inset-0 h-full w-full object-cover"
       >
@@ -20,7 +23,10 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 min-h-screen">
         <SiteHeader />
-        <main className="mx-auto flex min-h-[calc(100vh-61px)] max-w-6xl items-center justify-center px-4 text-center">
+        <main
+          className="mx-auto flex max-w-6xl items-center justify-center px-4 text-center"
+          style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT_PX}px)` }}
+        >
           <div className="flex flex-col items-center gap-6">
             <h1 className="text-6xl font-black tracking-tighter text-white md:text-8xl">
               XMAS STUDIO
